@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td , th{
+            border: ;
+          
+        }
+
+        caption{
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            padding-bottom:  10PX;
+        }
+
+        #Control td{
+            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+        }
+
+    </style>
+</head>
+<body>
+    <table >
+        <caption>MAY 2026</caption>
+        <thead>
+            <tr>
+                <td>SUN</td>
+               <td>MON</td>
+               <td>TUE</td>
+               <td>WED</td>
+               <td>THU</td>
+               <td>FRI</td>
+               <td>SAT</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <script>
+
+        const tbody = document.querySelector('tbody');
+        const m_y = document.querySelector('#m_y');
+
+
+        const arrow = document.querySelector(".arrow")
+
+        let dt = new Date();
+
+        dt.setDate(1);
+        let firstday = dt.getDay();
+        let flag = false;
+        let curMon = dt.getMonth();
+
+        for(i=0;i<6;i++){
+            let row = tbody.insertRow(i);
+            for(j=0;j<7;j++){
+                let col = row.insertCell(j);
+                if(i==0 && j==firstday){
+                    flag=true;
+                    col.innerText = dt.getDate();
+                    dt.setDate(dt.getDate()+1);
+                    
+                }else if(flag){
+                    col.innerText = dt.getDate();
+                    dt.setDate(dt.getDate()+1);
+
+                    if(dt.getMonth() != curMon){
+                        flag=false;
+
+                    }
+                }
+
+            }
+        }
+
+    </script>
+</body>
+</html>

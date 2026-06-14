@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #main_box{
+            width: 300px;
+            border: 1px solid red;
+            height: 500px;
+            margin: 50px auto;
+            border-radius: 12px;
+            padding: 3px;
+        }
+
+        #climate{
+            height: 250px;
+            border: 1px solid red;
+
+
+
+        }
+
+        #city_time{
+            height: 195px;
+            border: 1px solid red;
+            
+
+        }
+
+        #search{
+            height: 50px;
+            border: 1px solid red;
+
+        }
+
+        #city_search{
+            font-size: 30px;
+            width: 60%;
+            padding: 3px 10px;
+            border-radius: 4px;
+            border: 1px solid red; 
+            margin-top: 1px;
+        }
+
+        #btn{
+            border: 1px solid #ccc;
+            padding: 3px;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main_box">
+        <div id="climate"></div>
+        <div id="city_time"></div>
+        <div id="search">
+            <input type="search" id="city_search">
+            <img src="search_32dp_434343_FILL0_wght400_GRAD0_opsz40.svg" id="btn" >
+        </div>
+
+    </div>
+    <script>
+        const climate = document.querySelector('#climate');
+        const city_time = document.querySelector('#city_time');
+        const search = document.querySelector('#search');
+
+        const city_search = document.querySelector('#city_search');
+
+    </script>
+</body>
+</html>
